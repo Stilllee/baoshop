@@ -5,12 +5,12 @@ import { FaPencilAlt } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <header>
-      <Link to="/">
+    <header className="flex justify-between border-b border-black p-5">
+      <Link to="/" className="flex items-center text-3xl gap-2 font-semibold">
         <SiFoodpanda />
         <h1>Bao Shop</h1>
       </Link>
-      <nav>
+      <nav className="flex items-center gap-4 text-text">
         <Link to="/products">Products</Link>
         <Link to="/carts">Carts</Link>
         <Link to="/products/new">

@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         sans: ["Pretendard", "sans-serif"],
       },
+      colors: {
+        text: "#111111",
+      },
     },
   },
   plugins: [],
