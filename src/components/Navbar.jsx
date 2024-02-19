@@ -8,17 +8,8 @@ export default function Navbar() {
   const [user, setUser] = useState();
 
   useEffect(() => {
-    onUserStateChange((user) => {
-      console.log(user);
-      setUser(user);
-    });
-  });
-  const handleLogin = () => {
-    login().then(setUser);
-  };
-  const handleLogout = () => {
-    logout().then(setUser);
-  };
+    onUserStateChange(setUser);
+  }, []);
   return (
     <header className="flex justify-between border-b border-black p-5">
       <Link to="/" className="flex items-center text-3xl gap-2 font-semibold">
@@ -31,8 +22,8 @@ export default function Navbar() {
         <Link to="/products/new">
           <FaPencilAlt />
         </Link>
-        {!user && <button onClick={handleLogin}>Login</button>}
-        {user && <button onClick={handleLogout}>Logout</button>}
+        {!user && <button onClick={login}>Login</button>}
+        {user && <button onClick={logout}>Logout</button>}
       </nav>
     </header>
   );
