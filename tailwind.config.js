@@ -8,6 +8,8 @@ module.exports = {
       },
       colors: {
         text: "#111111",
+        sky: "#ABBEC3",
+        mint: "#BBD1C9",
       },
     },
   },
