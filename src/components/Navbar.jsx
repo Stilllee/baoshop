@@ -8,7 +8,6 @@ import { useAuthContext } from "./context/AuthContext";
 
 export default function Navbar() {
   const { user, login, logout } = useAuthContext();
-  console.log(user);
   return (
     <header className="flex justify-between p-5 border-b border-black">
       <Link to="/" className="flex items-center gap-2 text-3xl font-semibold">
