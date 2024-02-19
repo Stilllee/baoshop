@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { uploadImage } from "../api/uploader";
+import Button from "../components/ui/Button";
 
 export default function NewProduect() {
   const [product, setProduct] = useState({});
@@ -6,8 +8,10 @@ export default function NewProduect() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // 제품의 사진을 Cloudinary에 업로드 하고 URL을 획득
-    // Firebase에 새로운 제품을 추가함
+    uploadImage(file).then((url) => {
+      console.log(url);
+      // Firebase에 새로운 제품을 추가함
+    });
   };
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -69,6 +73,7 @@ export default function NewProduect() {
           required
           onChange={handleChange}
         />
+        <Button text={"제품 등록하기"} />
       </form>
     </section>
   );
