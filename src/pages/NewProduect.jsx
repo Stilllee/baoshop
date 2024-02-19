@@ -34,11 +34,17 @@ export default function NewProduect() {
   };
 
   return (
-    <section>
-      <h2>새로운 제품 등록</h2>
-      {success && <p>✅ {success}</p>}
-      {file && <img src={URL.createObjectURL(file)} alt="local file" />}
-      <form onSubmit={handleSubmit}>
+    <section className="w-full text-center">
+      <h2 className="my-4 text-2xl font-semibold">새로운 제품 등록</h2>
+      {success && <p className="my-2">✅ {success}</p>}
+      {file && (
+        <img
+          className="mx-auto mb-2 w-96"
+          src={URL.createObjectURL(file)}
+          alt="local file"
+        />
+      )}
+      <form className="flex flex-col px-12" onSubmit={handleSubmit}>
         <input
           type="file"
           accept="image/*"
