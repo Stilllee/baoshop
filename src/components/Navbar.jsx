@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { SiFoodpanda } from "react-icons/si";
 import { FaPencilAlt } from "react-icons/fa";
 import { login, logout, onUserStateChange } from "../api/firebase";
+import User from "./User";
 
 export default function Navbar() {
   const [user, setUser] = useState();
@@ -22,6 +23,7 @@ export default function Navbar() {
         <Link to="/products/new">
           <FaPencilAlt />
         </Link>
+        {user && <User user={user} />}
         {!user && <button onClick={login}>Login</button>}
         {user && <button onClick={logout}>Logout</button>}
       </nav>
