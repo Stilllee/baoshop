@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { uploadImage } from "../api/uploader";
 import Button from "../components/ui/Button";
+import { addNewProduct } from "../api/firebase";
 
 export default function NewProduect() {
   const [product, setProduct] = useState({});
@@ -9,8 +10,7 @@ export default function NewProduect() {
   const handleSubmit = (e) => {
     e.preventDefault();
     uploadImage(file).then((url) => {
-      console.log(url);
-      // Firebase에 새로운 제품을 추가함
+      addNewProduct(product, url);
     });
   };
   const handleChange = (e) => {
