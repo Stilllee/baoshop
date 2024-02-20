@@ -29,7 +29,10 @@ export default function ProductDetail() {
           </p>
           <p className="py-4">{description}</p>
           <div className="flex items-center">
-            <label className="mr-10 font-semibold" htmlFor="select">
+            <label
+              className="mr-10 font-semibold whitespace-nowrap"
+              htmlFor="select"
+            >
               사이즈
             </label>
             <select
