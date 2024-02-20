@@ -9,7 +9,7 @@ import { useAuthContext } from "./context/AuthContext";
 export default function Navbar() {
   const { user, login, logout } = useAuthContext();
   return (
-    <header className="flex justify-between p-5 border-b border-black">
+    <header className="flex justify-between p-5">
       <Link to="/" className="flex items-center gap-2 text-3xl font-semibold">
         <SiFoodpanda />
         <h1>Bao Shop</h1>

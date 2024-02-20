@@ -11,6 +11,12 @@ module.exports = {
         sky: "#ABBEC3",
         mint: "#BBD1C9",
       },
+      backgroundImage: {
+        banner: `url('/public/banner.webp')`,
+      },
+      height: {
+        160: "40rem",
+      },
     },
   },
   plugins: [],
