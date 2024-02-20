@@ -5,7 +5,7 @@ import Button from "../components/ui/Button";
 export default function ProductDetail() {
   const {
     state: {
-      product: { id, image, title, description, category, price, options },
+      product: { image, title, description, category, price, options },
     },
   } = useLocation();
   const [selected, setSelected] = useState(options && options[0]);
