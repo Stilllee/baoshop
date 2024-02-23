@@ -9,7 +9,9 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <AuthContextProvider>
         <Navbar />
-        <Outlet />
+        <div className="pt-20">
+          <Outlet />
+        </div>
       </AuthContextProvider>
     </QueryClientProvider>
   );
