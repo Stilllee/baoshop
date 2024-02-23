@@ -33,14 +33,14 @@ export default function MyCart() {
       {!hasProducts && <p>장바구니에 담긴 상품이 없습니다.</p>}
       {hasProducts && (
         <>
-          <ul className="mb-16">
+          <ul className="pb-16 border-b-2 border-black">
             {products &&
               products.map((product) => (
                 <CartItem key={product.id} product={product} uid={uid} />
               ))}
           </ul>
-          <div className="flex flex-col border-b-2 border-black">
-            <div className="flex items-center justify-between border-t-2 border-black">
+          <div className="flex flex-col items-center border-b-2 border-black">
+            <div className="flex items-center justify-between lg:w-1/2">
               <PriceCard text="상품금액" price={totalPrice} />
               <AiOutlinePlus className="shrink-0" />
               <PriceCard text="배송액" price={SHIPPING} />
