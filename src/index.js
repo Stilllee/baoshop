@@ -6,7 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import AllProducts from "./pages/AllProducts";
-import NewProduect from "./pages/NewProduect";
+import NewProduct from "./pages/NewProduct";
 import ProductDetail from "./pages/ProductDetail";
 import MyCart from "./pages/MyCart";
 import ProtectedRoute from "./pages/ProtectedRoute";
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         path: "products/new",
         element: (
           <ProtectedRoute requireAdmin>
-            <NewProduect />
+            <NewProduct />
           </ProtectedRoute>
         ),
       },

@@ -3,7 +3,7 @@ import { uploadImage } from "../api/uploader";
 import Button from "../components/ui/Button";
 import { addNewProduct } from "../api/firebase";
 
-export default function NewProduect() {
+export default function NewProduct() {
   const [product, setProduct] = useState({});
   const [file, setFile] = useState();
   const [isUploading, setIsUploading] = useState(false);
