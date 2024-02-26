@@ -9,7 +9,7 @@ import CartStatus from "./CartStatus";
 export default function Navbar() {
   const { user, login, logout } = useAuthContext();
   return (
-    <header className="fixed top-0 z-50 flex justify-between w-full h-20 p-5 bg-white border-b border-gray-200">
+    <header className="fixed top-0 z-50 flex justify-between w-full h-20 p-5 mx-auto bg-white border-b border-gray-200 max-w-screen-2xl">
       <Link to="/" className="flex items-center gap-2 text-2xl font-bold">
         <h1 className="uppercase">Bao Shop</h1>
       </Link>
