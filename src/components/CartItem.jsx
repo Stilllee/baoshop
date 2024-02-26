@@ -1,23 +1,23 @@
 import React from "react";
 import { CiSquareMinus, CiSquarePlus } from "react-icons/ci";
 import { TfiClose } from "react-icons/tfi";
-import { addOrUpdateToCart, removeFromCart } from "../api/firebase";
+import useCart from "../hooks/useCart";
 
 const ICON_CLASS = "mx-1 transition-all cursor-pointer hover:scale-110";
 
 export default function CartItem({
   product,
   product: { id, image, title, option, quantity, price },
-  uid,
 }) {
+  const { addOrUpdateItem, removeItem } = useCart();
   const handleMinus = () => {
     if (quantity < 2) return;
-    addOrUpdateToCart(uid, { ...product, quantity: quantity - 1 });
+    addOrUpdateItem.mutate({ ...product, quantity: quantity - 1 });
   };
   const handlePlus = () =>
-    addOrUpdateToCart(uid, { ...product, quantity: quantity + 1 });
+    addOrUpdateItem.mutate({ ...product, quantity: quantity + 1 });
 
-  const handleDelete = () => removeFromCart(uid, id);
+  const handleDelete = () => removeItem.mutate(id);
   return (
     <li className="flex items-center justify-between my-2">
       <img className="w-24 md:w-48" src={image} alt={title} />
