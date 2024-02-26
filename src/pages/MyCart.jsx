@@ -25,11 +25,11 @@ export default function MyCart() {
 
   return (
     <section>
-      <p>내 장바구니</p>
+      <p className="p-8 text-4xl font-semibold text-center">장바구니</p>
       {!hasProducts && <p>장바구니에 담긴 상품이 없습니다.</p>}
       {hasProducts && (
         <>
-          <ul className="pb-16 border-b-2 border-black">
+          <ul className="p-8 border-b-2 border-black">
             {products &&
               products.map((product) => (
                 <CartItem key={product.id} product={product} />

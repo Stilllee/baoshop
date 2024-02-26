@@ -19,8 +19,8 @@ export default function CartItem({
 
   const handleDelete = () => removeItem.mutate(id);
   return (
-    <li className="flex items-center justify-between my-2">
-      <img className="w-24 md:w-48" src={image} alt={title} />
+    <li className="flex items-center justify-between py-4 border-t border-gray-200">
+      <img className="w-24 md:w-36 lg:w-48" src={image} alt={title} />
       <div className="flex justify-between flex-1 ml-6">
         <div className="basis-3/5">
           <p className="text-lg">{title}</p>
